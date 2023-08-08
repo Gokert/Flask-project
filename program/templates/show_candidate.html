@@ -1,0 +1,45 @@
+{% extends "admin_header.html" %}
+{% block page_title %}Interview{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/candidates.css">
+{% endblock %}
+
+{% block content %}
+<div class="response">
+				<table class="table" id="table">
+					<thead class="thd">
+					<tr>
+						<th class="e">Full name</th>
+						<th class="e">Vacancy</th>
+						<th class="e">Address</th>
+						<th class="e">Gender</th>
+						<th class="e">Education</th>
+						<th class="e">Date of birth</th>
+						<th class="e">Actions</th>
+					</tr>
+					</thead>
+					<tbody class="tby">
+					{% for i in array %}
+
+					<tr class="tr" id="tr">
+
+						<td class="empl3">{{i.get('Name')}}</td>
+						<td class="empl3">{{i.get('Pos_name')}}</td>
+						<td class="empl3">{{i.get('Address')}}</td>
+						<td class="empl3">{{i.get('Gender')}}</td>
+						<td class="empl3">{{i.get('education')}}</td>
+						<td class="empl3">{{i.get('birthday')}}</td>
+						<td class="empl3">
+							<div class="menu">
+								<a class="interview" href="{{ url_for('interview.interview') }}">Interview</a>
+							</div>
+						</td>
+
+					</tr>
+					{% endfor %}
+					<tbody>
+
+				</table>
+			</div>
+{% endblock %}

@@ -1,0 +1,1 @@
+select vacancy_heading, vacancy_text from vacancy;

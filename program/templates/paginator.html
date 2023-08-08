@@ -1,0 +1,25 @@
+{% block css_paginator %}
+	<link rel="stylesheet" href="/static/paginator.css">
+{% endblock %}
+
+{% block paginator %}
+{% if page %}
+<div class="pagination">
+    {% if page > 1 %}
+        <a class="pagination-link" href="?page={{ page - 1 }}">Предыдущая</a>
+    {% endif %}
+
+    {% for p in range(1, total_pages + 1) %}
+        {% if p == page %}
+            <strong class="pagination-current">{{ p }}</strong>
+        {% else %}
+            <a class="pagination-link" href="?page={{ p }}">{{ p }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if page < total_pages %}
+        <a class="pagination-link" href="?page={{ page + 1 }}">Следующая</a>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}

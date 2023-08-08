@@ -1,0 +1,1 @@
+UPDATE vacancy set Close_date = CURRENT_DATE() where Vac_id = "$vacancy_id";

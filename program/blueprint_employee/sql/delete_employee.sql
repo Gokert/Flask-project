@@ -1,0 +1,1 @@
+UPDATE employee set Dismiss_date = CURRENT_DATE() where Emp_id = "$Emp_id";

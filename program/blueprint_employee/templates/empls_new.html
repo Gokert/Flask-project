@@ -1,0 +1,55 @@
+{% extends "admin_header.html" %}
+
+{% block page_title %}Employees{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="static/empls.css">
+{% endblock %}
+
+{% block content %}
+		<div class="container">
+			<div class="search_add active">
+				<a class="add" href="{{url_for('employees.add_empl')}}">ADD</a>
+				<input class="search" placeholder="search on username">
+			</div>
+			<div class="response">
+				<table class="table" id="table">
+					<thead class="thd">
+					<tr>
+						<th class="e">Employees</th>
+						<th class="e">Position</th>
+						<th class="e">Address</th>
+						<th class="e">Education</th>
+						<th class="e">Date of enrollment</th>
+						<th class="e">Salary</th>
+						<th class="e">Actions</th>
+					</tr>
+					</thead>
+					<tbody class="tby">
+					{% for i in array %}
+					<tr class="tr" id="tr">
+
+						<td class="empl3">{{i.get('Name')}}</td>
+						<td class="empl3">{{i.get('Name_pos')}}</td>
+						<td class="empl3">{{i.get('Adress')}}</td>
+						<td class="empl3">{{i.get('education')}}</td>
+						<td class="empl3">{{i.get('Enroll_date')}}</td>
+						<td class="empl3">{{i.get('Salary')}}</td>
+						<td class="empl3">
+							<div class="menu">
+								<a class="delete" href="{{ url_for('employees.dl', Emp_id=i.get('Emp_id')) }}">X</a>
+							</div>
+						</td>
+					</tr>
+					{% endfor %}
+					<tbody>
+				</table>
+			</div>
+			</div>
+		</div>
+
+{% include 'paginator.html' %}
+{% block paginator %}{% endblock %}
+
+
+{% endblock %}

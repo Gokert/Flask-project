@@ -1,0 +1,1 @@
+select count(*) from vacancy where Close_date is null;

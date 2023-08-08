@@ -1,0 +1,55 @@
+{% extends "admin_header.html" %}
+{% block page_title %}Interview{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="static/interview.css">
+{% endblock %}
+
+{% block content %}
+<div>
+		<div class="res"><a href="{{ url_for('interview.report') }}">Request by dates</a></div>
+		<div class="res"><a href="{{ url_for('interview.new') }}">New </a></div>
+		<div class="res"><a href="{{ url_for('interview.results') }}">Results</a></div>
+		<div class="res"><a href="{{ url_for('interview.interview') }}">All</a></div>
+		<div class="response">
+				<table class="table" id="table">
+					<thead class="thd">
+					<tr>
+						<th class="e">Full name</th>
+						<th class="e">Vacancy</th>
+						<th class="e">Scores</th>
+						<th class="e">Result</th>
+						<th class="e">Employee</th>
+						<th class="e">Date of the event</th>
+						<th class="e">Actions</th>
+					</tr>
+					</thead>
+					<tbody class="tby">
+					{% for i in array %}
+
+					<tr class="tr" id="tr">
+
+						<td class="empl3">{{i.get('Name')}}</td>
+						<td class="empl3">{{i.get('Name_pos')}}</td>
+						<td class="empl3">{{i.get('Scores')}}</td>
+						<td class="empl3">{{i.get('Result')}}</td>
+						<td class="empl3">{{i.get('Name_emp')}}</td>
+						<td class="empl3">{{i.get('Int_date')}}</td>
+						<td class="empl3">
+							<div class="menu">
+								<a class="edit" href="{{ url_for('interview.edit', Int_id=i.get('Int_id')) }}">Edit</a>
+								<a class="edit" href="{{ url_for('interview.show', Int_id=i.get('Int_id')) }}">Show</a>
+							</div>
+						</td>
+					</tr>
+					{% endfor %}
+					<tbody>
+
+				</table>
+		</div>
+</div>
+
+{% include 'paginator.html' %}
+{% block paginator %}{% endblock %}
+
+{% endblock %}

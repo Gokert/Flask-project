@@ -1,0 +1,56 @@
+{% extends "admin_header.html" %}
+{% block page_title %}Employees{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/add.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form method="POST">
+        <div class="table">
+            <div class="pnc">
+                <div class="name">Full name</div>
+                <input name="name_text">
+            </div>
+            <div class="pnc">
+                <div class="birthday">Date of birth</div>
+                <input name="birthday_text" placeholder="01-01-2000">
+            </div>
+            <div class="pnc">
+                <div class="adress">Residential address (optional)</div>
+                <input name="address_text">
+            </div>
+            <div class="pnc">
+                <div class="education">Education</div>
+                <input name="education_text">
+            </div>
+            <div class="pnc">
+                <div class="date_enroll">Date of enrollment</div>
+                <input name="date_enroll_text">
+            </div>
+            <div class="pnc">
+                <div class="salary">Salary</div>
+                <input name="salary_text">
+            </div>
+            <div class="pnc">
+                <div class="position">Position</div>
+                    <input name="position_text" placeholder="For a new position">
+                    <div class="list">
+			        <p><select name="agent_id" id="agent_id">
+                         <option selected disabled>Positions</option>
+                        {% if positions !=None %}
+                            {% for i in positions %}
+                            <option>{{ i.get("Name_pos") }}</option>
+                            {% endfor %}
+                        {% endif %}
+                       </select>
+                   </p>
+			    </div>
+
+            </div>
+            <input type="submit" class="submit" value="Send">
+        </div>
+        </form>
+    </div>
+{% endblock %}

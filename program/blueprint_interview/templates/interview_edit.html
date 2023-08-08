@@ -1,0 +1,29 @@
+{% extends "admin_header.html" %}
+{% block page_title %}Interview_new{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/interview_edit.css">
+{% endblock %}
+
+{% block content %}
+	<div class ="add">
+			<form action="{{url_for('interview.interview')}}" method="POST">
+				<p>ADD RESUME</p>
+				<input class="heading" name="Scores" placeholder="Scores">
+				<input class="heading" name="Result" placeholder="Result">
+				<div class="list">
+			        <p><select name="agent_id" id="agent_id">
+                         <option selected disabled>Employee</option>
+                        {% if array !=None %}
+                            {% for i in array %}
+                            <option>{{ i.get('Name') }}</option>
+                            {% endfor %}
+                        {% endif %}
+                       </select>
+                   </p>
+			    </div>
+				<input class="heading" name="Int_date" placeholder="Date of the event in the format 2000-01-01">
+				<input type="submit" class="submit" value="Send">
+			</form>
+	</div>
+{% endblock %}

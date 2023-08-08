@@ -1,0 +1,33 @@
+{% extends "admin_header.html" %}
+{% block page_title %}Vacancy{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="static/vacancy.css">
+{% endblock %}
+
+{% block content %}
+	<div>
+		{% if array!=None %}
+			{% for i in array %}
+				<div class="vacancy">
+					<a class="delete" href="{{ url_for('vacancy.dlt', vacancy_id=i.get('Vac_id')) }}">X</a>
+					<p class="p1">{{ i.get("Name") }}</p>
+					<p class="p2">{{ i.get("txt") }}</p>
+				</div>
+			{% endfor %}
+		{% endif %}
+		<div class ="add">
+			<form action="{{url_for('vacancy.vacancy_add')}}" method="POST">
+				<p>ADD VACANСY</p>
+				<input class="heading" name="vacancy_heading" placeholder="Position">
+				<textarea class="text" name="vacancy_text" placeholder="Text"></textarea>
+				<input class="salary" name="vacancy_salary" placeholder="Payment">
+				<input type="submit" class="submit" value="Send">
+			</form>
+		</div>
+	</div>
+
+{% include 'paginator.html' %}
+{% block paginator %}{% endblock %}
+
+{% endblock %}

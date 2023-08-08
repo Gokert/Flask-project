@@ -1,0 +1,1 @@
+insert into interview(Cand_id,Vac_id) values ("$Cand_id","$Vac_id")

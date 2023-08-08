@@ -1,0 +1,1 @@
+insert into position_unitcode100(Name_pos,Min_salary,Max_salary) values ('$Name_pos','$Min','$Max')

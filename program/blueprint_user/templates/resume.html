@@ -1,0 +1,21 @@
+{% extends "user_header.html" %}
+{% block page_title %}User{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/resume.css">
+{% endblock %}
+
+{% block content %}
+	<div class ="add">
+			<form action="{{url_for('personal_account_user.personal_account')}}" method="POST">
+				<p>ADD RESUME</p>
+				<input class="heading" name="Name" placeholder="Your name">
+				<input class="heading" name="Address" placeholder="Address">
+				<input class="heading" name="Gender" placeholder="Gender">
+				<input class="heading" name="Education" placeholder="Education">
+				<input class="heading" name="Birthday" placeholder="Date of birth in the format 2000-01-01">
+				<textarea class="text" name="resume" placeholder="Text"></textarea>
+				<input type="submit" class="submit" value="Send">
+			</form>
+	</div>
+{% endblock %}

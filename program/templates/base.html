@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/static/base.css">
+	{% block css%}{% endblock %}
+
+	<link rel="shortcut icon" href="{{ url_for('static', filename='1.jpg') }}">
+	<title>{% block page_title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="container1">
+		{% block header %}{% endblock %}
+	</header>
+	<section>
+		{% block content %}{% endblock %}
+	</section>
+</body>
+</html>

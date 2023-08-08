@@ -1,0 +1,1 @@
+select Cand_id from candidate where Name = "$Name" and Birthday = "$Birthday"

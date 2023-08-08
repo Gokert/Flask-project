@@ -1,0 +1,22 @@
+{% extends "user_header.html" %}
+{% block page_title %}User{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/vacancy_user.css">
+{% endblock %}
+
+{% block content %}
+		{% if array!=None %}
+			{% for i in array %}
+				<div class="vacancy">
+					<p class="p1">{{ i.get("Name") }}</p>
+					<p class="p2">{{ i.get("txt") }}</p>
+					<a class="send" href="{{ url_for('personal_account_user.resume', id=i.get('Vac_id')) }}">Send resume</a>
+				</div>
+			{% endfor %}
+		{% endif %}
+
+{% include 'paginator.html' %}
+{% block paginator %}{% endblock %}
+
+{% endblock %}

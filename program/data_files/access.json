@@ -1,0 +1,27 @@
+{
+  "a": [
+    "blueprint_admin",
+    "employees",
+    "vacancy",
+    "add_employee.empls",
+    "candidates.candidates",
+    "interview",
+    "blueprint_report"
+  ],
+  "b": [
+    "blueprint_admin.empl"
+  ],
+  "manager": [
+    "bp_report.start_page2",
+    "bp_report.start_report"
+  ],
+  "external": [
+    "blueprint_admin",
+    "admin.admin",
+    "blueprint_admin.admin",
+    "admin.admin",
+    "personal_account_user",
+    "personal_account_user.kek",
+    "vacancy_user"
+  ]
+}

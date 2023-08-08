@@ -1,0 +1,1 @@
+UPDATE interview set Result = "$Result", Int_date = "$Int_date", Scores = "$Scores" , Emp_id = ( select Emp_id from employee where Name = "$Name_emp") where Int_id = "$Int_id"

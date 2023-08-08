@@ -1,0 +1,1 @@
+select login,user_id, user_group from internal_user
