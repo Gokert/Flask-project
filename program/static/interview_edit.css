@@ -6,7 +6,7 @@ header {
 	background-color: #D3D3D3;
 	border-bottom: 2px solid #808080;
 	top: 0;
-    left: 0;
+    	left: 0;
 
     padding: 0  ;
 	margin: 0 ;
@@ -38,15 +38,12 @@ section {
 }
 
 .nav_link{
-	/*display: inline-block;*/
 	vertical-align: top;
 	color: black;
 	margin: 0 15px;
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
-	/*background-color: orange;*/
-	/*border-radius: 9px;*/
-	/*box-shadow: 0 5px 0 #3c354a;*/
+
 	text-decoration: none;
 	transition: color 0.5s linear;
 	transition: margin-top 0.2s linear;
@@ -54,8 +51,6 @@ section {
 
 .nav_link:hover{
 margin-top: 7px;
-/*box-shadow: 0 3px 0 #3c354a;*/
-/*background-color: #daa520  ;*/
 color: #daa520;
 }
 

@@ -68,7 +68,6 @@
 }
 
 .add{
-    /*position: absolute;*/
 	width: 100px;
 	height: 60px;
 	background-color: #C0C0C0;
@@ -107,14 +106,12 @@
 }
 
 .popups__ineer input{
-   /* display:block;*/
     margin:0 auto 15px;
     width:80%;
     text-align:center;
 
 }
 .popups__ineer.button_menu{
-    /*display:block;*/
     margin:0 auto 15px;
     width:80%;
     text-align:center;
@@ -124,7 +121,7 @@
 
 .button_menu{
     color:black;
-    /*display:block;*/
+
     margin:0 auto 15px;
     width:80%;
     text-align:center;
@@ -140,11 +137,9 @@
 }
 
 .popups__ineer.active{
-    /*display:flex;*/
 }
 
 .close_popup{
-    /*position:absolute;*/
     top:10px;
     right:15px;
     color:black;
@@ -168,7 +163,6 @@
 .nav {
 	text-transform: uppercase;
 	float: right;
-	/*display:flex;*/
 	padding-top: 20px;
 	padding-right: 60px;
 }
@@ -200,13 +194,6 @@ margin-top: 7px;
 color: #daa520;
 }
 
-/*
-body {
-	padding: 0  ;
-	margin: 0 ;
-	font-family: Cormorant;
-}
-*/
 .left_column{
 		 height: 100vh;
 		 position: relative;

@@ -1,11 +1,4 @@
-/*
-.clearfix:after {
-	content: '';
-	display: table;
-	width: 100%;
-	clear: both;
-}
-*/
+
 section {
 	 width: 100vw;
 	 height: 100vh;
@@ -84,9 +77,6 @@ section {
 	margin: 0 15px;
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
-	/*background-color: orange;*/
-	/*border-radius: 9px;*/
-	/*box-shadow: 0 5px 0 #3c354a;*/
 	text-decoration: none;
 	transition: color 0.5s linear;
 	transition: margin-top 0.5s linear;
@@ -94,8 +84,6 @@ section {
 }
 .nav_link:hover{
 margin-top: 12px;
-/*box-shadow: 0 3px 0 #3c354a;*/
-/*background-color: #daa520  ;*/
 color: #daa520;
 }
 
@@ -109,11 +97,9 @@ header {
 	border-bottom: 2px solid #808080;
 	 position: fixed;
 
-	/*position: absolute;*/
 	top: 0;
     left: 0;
-   /* overflow: auto;*/
-   
+
     padding: 0  ;
 	margin: 0 ;
 

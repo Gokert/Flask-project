@@ -39,15 +39,12 @@ section {
 }
 
 .nav_link{
-	/*display: inline-block;*/
+
 	vertical-align: top;
 	color: black;
 	margin: 0 15px;
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
-	/*background-color: orange;*/
-	/*border-radius: 9px;*/
-	/*box-shadow: 0 5px 0 #3c354a;*/
 	text-decoration: none;
 	transition: color 0.5s linear;
 	transition: margin-top 0.2s linear;
@@ -55,8 +52,6 @@ section {
 
 .nav_link:hover{
 margin-top: 7px;
-/*box-shadow: 0 3px 0 #3c354a;*/
-/*background-color: #daa520  ;*/
 color: #daa520;
 }
 
@@ -71,7 +66,6 @@ body {
     margin:0 auto;
     width:250px;
     height:300px;
-    /*border:1px solid black;*/
     position:absolute;
 
     text-align:center;
@@ -106,21 +100,6 @@ body {
     resize: none;
 }
 
-
-
-
-
-/*
-.add.text{
-    height:100px;
-    width:50px;
-    position:relative;
-    margin-top:20px;
-}
-
-.add.heading {
-    background-color:black;
-}*/
 
 .vacancy {
     width:300px;
@@ -160,9 +139,6 @@ body {
     text-decoration:none;
     font-size:10px;
     padding:3px;
-    /*background-color:red;
-    border:black;
-    border-radius:6px;*/
 
 }
 .delete:hover{
