@@ -1,85 +1,15 @@
-
-header {
-	width: 100%;
-	height: 90px;
-	text-align:center;
-	background-color: #D3D3D3;
-	border-bottom: 2px solid #808080;
-	top: 0;
-    	left: 0;
-
-    	padding: 0  ;
-	margin: 0 ;
- }
-
-
-
-
-
-.container{
-    width: 1170px;
-    margin: 0  auto;
-    padding: 0 15px;
-    margin-top:50px;
-}
-
-section {
-	 width: 100%;
-	 height: 100vh;
-}
-
-.nav {
-	text-transform: uppercase;
-	float: right;
-	display:flex;
-	padding-top: 20px;
-	padding-right: 60px;
-}
-
-.nav > li {
-    display: flex;
-    align-items: stretch;
-}
-
-.nav_link{
-	vertical-align: top;
-	color: black;
-	margin: 0 15px;
-	font-size: 20px;
-	padding: 10px 20px 10px 20px;
-
-	text-decoration: none;
-	transition: color 0.5s linear;
-	transition: margin-top 0.2s linear;
-}
-
-.nav_link:hover{
-margin-top: 7px;
-color: #daa520;
-}
-
-
-
-
-body {
-	padding: 0  ;
-	margin: 0 ;
-	font-family: Cormorant;
-}
-
 .add:hover{
     box-shadow: 0 1px 0 #3c354a;
 	top: 2px;
 	background-color: #FFEBCD;
 	cursor:crosshair;
 }
+
 .table tbody tr:hover{
     border-radius: 40px ;
     background-color:#ccc;
     text-decoration: none;
 }
-
-
 
 .add {
     top:150px;
@@ -88,26 +18,20 @@ body {
     width:250px;
     height:300px;
     position:relative;
-
-
-
     text-align:center;
-
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     border-radius:6px ;
     background-color:#D3D3D3;
-
 }
+
 .add p {
     font-weight: bold;
     padding-top:20px;
 }
 
-
 .add input[type="submit"]{
     margin-top:20px;
     position:relative;
-
 }
 
 .add textarea.text{
@@ -118,37 +42,7 @@ body {
     resize: none;
 }
 
-.vacancy {
-    width:300px;
-
-    margin:0 auto;
-    margin-top:40px;
-
-    position:relative;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-
-    border-radius:8px;
-}
-
-
-
-.vacancy .p1{
-    top:10px;
-    position:relative;
-    text-align:center;
-    text-weight:bold;
-    font-size:28px;
-}
-
-.vacancy .p2{
-    text-align:center;
-    font-size:17px;
-    position:relative;
-    padding:0 20px 40px 20px;
-}
-
 .response {
-   /* overflow-y: auto;*/
     position:relative;
     margin-top:5%;
 }

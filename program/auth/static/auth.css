@@ -1,15 +1,7 @@
-
-section {
-	 width: 100vw;
-	 height: 100vh;
-
-}
-
 .message{
     text-align:center;
     font-size:24px;
 }
-
 
 .reg {
 	width: 250px;
@@ -20,7 +12,6 @@ section {
 	position: relative;
 	top: 15%;
 	left: 43%;
-
 }
 
 .login{
@@ -57,56 +48,4 @@ section {
 .lg {
 	top: 5%;
 	position: relative;
-
-}
-
-
-.nav {
-	text-transform: uppercase;
-	float: right;
-	padding-top: 20px;
-	padding-right: 60px;
-
-
-}
-
-.nav_link{
-	display: inline-block;
-	vertical-align: top;
-	color: black;
-	margin: 0 15px;
-	font-size: 20px;
-	padding: 10px 20px 10px 20px;
-	text-decoration: none;
-	transition: color 0.5s linear;
-	transition: margin-top 0.5s linear;
-
-}
-.nav_link:hover{
-margin-top: 12px;
-color: #daa520;
-}
-
-.head {
-	background-color: #f0e68c;
-}
-header {
-	width: 100%;
-	height: 90px;
-	background-color: #D3D3D3;
-	border-bottom: 2px solid #808080;
-	 position: fixed;
-
-	top: 0;
-    left: 0;
-
-    padding: 0  ;
-	margin: 0 ;
-
- }
-
-body {
-	padding: 0  ;
-	margin: 0 ;
-	font-family: Cormorant;
 }
