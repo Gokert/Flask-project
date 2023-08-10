@@ -1,0 +1,36 @@
+{% extends "admin_header.html" %}
+{% block page_title %}Employees{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/add_employee.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form method="POST">
+            <div class="table">
+                	{{ form.hidden_tag() }}
+					<p>{{ form.name.label() }} {{ form.name }}</p>
+					<p>{{ form.birthday.label() }} {{ form.birthday }}</p>
+					<p>{{ form.address.label() }} {{ form.address }}</p>
+                    <p>{{ form.education.label() }} {{ form.education }}</p>
+					<p>{{ form.enroll_date.label() }} {{ form.enroll_date }}</p>
+					<p>{{ form.salary.label() }} {{ form.salary }}</p>
+                    <div class="position">Position</div>
+                    <div class="list">
+                        <p>
+                            <select name="agent_id" id="agent_id">
+                             <option selected disabled>Positions</option>
+                            {% if positions !=None %}
+                                {% for i in positions %}
+                                <option value="{{ i.get('Pos_id') }}">{{ i.get("Name_pos") }}</option>
+                                {% endfor %}
+                            {% endif %}
+                           </select>
+                       </p>
+                    </div>
+                    {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

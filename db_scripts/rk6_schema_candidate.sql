@@ -34,7 +34,7 @@ CREATE TABLE `candidate` (
   PRIMARY KEY (`Cand_id`),
   KEY `external_user_id` (`user_id`),
   CONSTRAINT `external_user_id` FOREIGN KEY (`user_id`) REFERENCES `external_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `candidate` (
 
 LOCK TABLES `candidate` WRITE;
 /*!40000 ALTER TABLE `candidate` DISABLE KEYS */;
-INSERT INTO `candidate` VALUES (1,'Andrey Ivanov','Moscow','M','MGU','1999-01-01',NULL,NULL),(2,'Ivan Kolesov','Moscow','M','MGSU','1998-01-01',NULL,NULL),(3,'Ivan Petrenko','Tver','M','MGSU','2001-05-01',NULL,NULL),(26,'Vlad Scripal','Moscow','M','MSTU','2002-01-01','Python Django',NULL),(27,'Pasha Pashutin','Moscow','M','MGU','2005-01-01','fghj',NULL),(28,'Misha Timofeev','Moscow','M','MSTU','2005-01-01','кпфукп',NULL),(29,'Маша','Moscow','Ж','MSTU','2000-01-01','B+',1),(30,'Andrey Scrip','Moscow','M','MGU','2000-01-01','U+',NULL),(31,'Masha','Moscow','M','MSTU','2005-01-01','U++',NULL),(32,'Masha Timof','Moscow','M','MGU','2005-01-01','u+++',1),(33,'m','Moscow','Ж','MSTU','2005-01-01','g',1),(34,'Toha','Moscow','M','MSTU','2001-01-01','хочу оч',1),(35,'Petya','Moscow','M','MGU','2001-01-01','хочуу',3),(36,'Petya','Moscow','M','MSTU','2005-01-01','ggg',3),(37,'Masha','Moscow','M','MSTU','2005-01-01','Училась в MSTU на отл , знаю js/css/html',1),(38,'Антон','Moscow','M','MIREA','1999-01-01','Окончил МИРЭА с отличием. Знаю js/css/html',3),(39,'Vlad Scripalenko','Moscow','M','MGU','2005-01-01','asrgeht',1),(40,'Vlad Scripalenko214213','Moscow','M','MSTU','2005-01-01','сптатпь',1);
+INSERT INTO `candidate` VALUES (1,'Andrey Ivanov','Moscow','male','MGU','1999-01-01',NULL,NULL),(2,'Ivan Kolesov','Moscow','male','MGSU','1998-01-01',NULL,NULL),(3,'Ivan Petrenko','Tver','male','MGSU','2001-05-01',NULL,NULL),(26,'Vlad Scripal','Moscow','male','MSTU','2002-01-01',' ',NULL),(27,'Pasha Pashutin','Moscow','male','MGU','2005-01-01',' ',NULL),(28,'Misha Timofeev','Moscow','male','MSTU','2005-01-01','',NULL),(29,'Kasha Kek','Moscow','female','MSTU','2000-01-01','',1),(30,'Andrey Scrip','Moscow','male','MGU','2000-01-01','',NULL),(31,'Masha','Moscow','female','MSTU','2005-01-01','',NULL),(32,'Masha Timof','Moscow','female','MGU','2005-01-01','',1),(33,'Masha Tet','Moscow','female','MSTU','2005-01-01','',1),(34,'Toha','Moscow','male','MSTU','2001-01-01','',1),(35,'Petya','Moscow','male','MGU','2001-01-01','',3),(36,'Petya','Moscow','male','MSTU','2005-01-01','',3),(37,'Masha','Moscow','male','MSTU','2005-01-01','',1),(38,'Anton','Moscow','male','MIREA','1999-01-01','',3),(39,'Vlad Scripalenko','Moscow','male','MGU','2005-01-01','',1),(40,'Vlad Scripalenko214213','Moscow','male','MSTU','2005-01-01','',1),(41,'Masha Kek','Moscow','female','MGU','1111-02-22','',1);
 /*!40000 ALTER TABLE `candidate` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-13 22:09:01
+-- Dump completed on 2023-08-10 18:29:40

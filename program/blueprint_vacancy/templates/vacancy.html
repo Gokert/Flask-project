@@ -10,7 +10,7 @@
 		{% if array!=None %}
 			{% for i in array %}
 				<div class="vacancy">
-					<a class="delete" href="{{ url_for('vacancy.dlt', vacancy_id=i.get('Vac_id')) }}">X</a>
+					<a class="delete" href="{{ url_for('vacancy.delete_vacancy', vacancy_id=i.get('Vac_id')) }}">X</a>
 					<p class="p1">{{ i.get("Name") }}</p>
 					<p class="p2">{{ i.get("txt") }}</p>
 				</div>
@@ -19,10 +19,11 @@
 		<div class ="add">
 			<form action="{{url_for('vacancy.vacancy_add')}}" method="POST">
 				<p>ADD VACANСY</p>
-				<input class="heading" name="vacancy_heading" placeholder="Position">
-				<textarea class="text" name="vacancy_text" placeholder="Text"></textarea>
-				<input class="salary" name="vacancy_salary" placeholder="Payment">
-				<input type="submit" class="submit" value="Send">
+				     {{ form.hidden_tag() }}
+					<p>{{ form.head.label() }} {{ form.head }}</p>
+					<p>{{ form.text.label() }} {{ form.text }}</p>
+					<p>{{ form.salary.label() }} {{ form.salary }}</p>
+				{{ form.submit() }}
 			</form>
 		</div>
 	</div>

@@ -37,7 +37,7 @@ CREATE TABLE `internal_user` (
 
 LOCK TABLES `internal_user` WRITE;
 /*!40000 ALTER TABLE `internal_user` DISABLE KEYS */;
-INSERT INTO `internal_user` VALUES (111,'a','andrey','1234'),(112,'b','pasha','1234'),(136,'d','pasha','1'),(144,'c','pasha','1234'),(149,'b','katya','1111'),(150,'c','andrey','1');
+INSERT INTO `internal_user` VALUES (111,'admin','andrey','1234'),(144,'manager','pasha','1234'),(149,'manager','katya','1111');
 /*!40000 ALTER TABLE `internal_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-13 22:09:01
+-- Dump completed on 2023-08-10 18:29:40

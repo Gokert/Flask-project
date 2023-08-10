@@ -28,7 +28,7 @@ CREATE TABLE `position_unitcode100` (
   `Min_salary` int NOT NULL,
   `Max_salary` int NOT NULL,
   PRIMARY KEY (`Pos_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf32;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf32;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `position_unitcode100` (
 
 LOCK TABLES `position_unitcode100` WRITE;
 /*!40000 ALTER TABLE `position_unitcode100` DISABLE KEYS */;
-INSERT INTO `position_unitcode100` VALUES (2,'Директор',90000,11500),(3,'Начальник отдела кадров',70000,90000),(4,'frontend разработчик',70000,90000),(5,'Java разработчик',70000,90000),(6,'C# разработчик',60000,90000),(7,'Java разработчик',40000,60000),(8,'SQL разработчик',44000,64000),(9,'Python разработчик',43000,64000),(10,'Переводчик англичского языка',50000,75000),(34,'Повар',10000,30000),(35,'Бухгалтер',30000,40000),(37,'C++ разработчик',50000,70000),(44,'Слесарь',10010,30010),(48,'Переводчик английского языка',110000,130000),(71,'Java ',60079,80079),(72,'Машинист',60079,80079);
+INSERT INTO `position_unitcode100` VALUES (2,'Director',90000,11500),(3,'Head of HR Department',70000,90000),(4,'frontend developer',70000,90000),(5,'Java developer',70000,90000),(6,'C# developer',60000,90000),(7,'Java developer',40000,60000),(8,'SQL developer',44000,64000),(9,'Python developer',43000,64000),(10,'English Translator',50000,75000),(34,'Cook',10000,30000),(35,'Accountant',30000,40000),(37,'C++ developer',50000,70000),(44,'Plumber',10010,30010),(48,'English Translator',110000,130000),(71,'Java ',60079,80079),(72,'Machinist',60079,80079),(74,'Teacher',30000,30000);
 /*!40000 ALTER TABLE `position_unitcode100` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-13 22:09:01
+-- Dump completed on 2023-08-10 18:29:40

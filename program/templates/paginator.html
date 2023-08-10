@@ -6,7 +6,7 @@
 {% if page %}
 <div class="pagination">
     {% if page > 1 %}
-        <a class="pagination-link" href="?page={{ page - 1 }}">Предыдущая</a>
+        <a class="pagination-link" href="?page={{ page - 1 }}">Previous</a>
     {% endif %}
 
     {% for p in range(1, total_pages + 1) %}
@@ -18,7 +18,7 @@
     {% endfor %}
 
     {% if page < total_pages %}
-        <a class="pagination-link" href="?page={{ page + 1 }}">Следующая</a>
+        <a class="pagination-link" href="?page={{ page + 1 }}">Next</a>
     {% endif %}
 </div>
 {% endif %}

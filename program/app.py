@@ -6,8 +6,11 @@ from blueprint_vacancy.route import blueprint_vacancy
 from access import login_required
 from blueprint_user.route import blueprint_personal_account
 from blueprint_interview.route import blueprint_interview
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
+app.secret_key = 'Superley'
+csrf = CSRFProtect()
 
 app.register_blueprint(blueprint_auth, url_prefix='/auth')
 app.register_blueprint(blueprint_admin, url_prefix='/admin')
@@ -16,28 +19,30 @@ app.register_blueprint(blueprint_vacancy, url_prefix='/vacancy')
 app.register_blueprint(blueprint_personal_account, url_prefix='/personal_account')
 app.register_blueprint(blueprint_interview, url_prefix='/interview')
 
-app.secret_key = 'Superley'
-
 app.config['db_config'] = json.load(open('data_files/dbconfig.json'))
-app.config['cache_config'] = json.load(open('data_files/cache.json'))
 app.config['access_config'] = json.load(open('data_files/access.json'))
+
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
 @login_required
 def menu_choice():
+    """Home page"""
+
     if 'user_id' in session:
-        if session.get('user_group',None):
+        if session.get('user_group', None):
             return render_template("main_header.html", username=session.get('username'))
         else:
             return render_template("main_header.html", username=session.get('username'))
     else:
         return render_template("main_header.html")
 
+
 @app.route('/exit')
 def exit_func():
     session.clear()
     return render_template("main_header.html")
+
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080)

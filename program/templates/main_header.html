@@ -4,13 +4,13 @@
 {% block header %}
     <div class="head">
 		<nav class="nav">
-			<a class ="nav_link"href="/home">Main</a>
-			<a class ="nav_link"href="#">About us</a>
-			<a class ="nav_link"href="#">Shop</a>
+			<a class ="nav_link" href="{{ url_for('menu_choice') }}">Main</a>
+			<a class ="nav_link" href="#">About us</a>
+			<a class ="nav_link" href="#">Shop</a>
 			{% if username %}
-			<a class ="nav_link"href="/auth">{{username}}</a>
+			<a class ="nav_link" href="{{ url_for('blueprint_auth.start_auth') }}">{{username}}</a>
 			{% else %}
-			<a class ="nav_link"href="/auth">Account</a>
+			<a class ="nav_link" href="{{ url_for('blueprint_auth.start_auth') }}">Account</a>
 			{% endif %}
 		</nav>
 	</div>

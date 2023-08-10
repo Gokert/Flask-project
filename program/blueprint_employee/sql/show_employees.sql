@@ -1,1 +1,1 @@
-select Name_pos from position_unitcode100;
+select Pos_id, Name_pos from position_unitcode100;

@@ -1,1 +1,0 @@
-insert into internal_user(login,password,user_group) values ("$login","$password","$user_group")

@@ -9,13 +9,14 @@
 	<div class ="add">
 			<form action="{{url_for('personal_account_user.personal_account')}}" method="POST">
 				<p>ADD RESUME</p>
-				<input class="heading" name="Name" placeholder="Your name">
-				<input class="heading" name="Address" placeholder="Address">
-				<input class="heading" name="Gender" placeholder="Gender">
-				<input class="heading" name="Education" placeholder="Education">
-				<input class="heading" name="Birthday" placeholder="Date of birth in the format 2000-01-01">
-				<textarea class="text" name="resume" placeholder="Text"></textarea>
-				<input type="submit" class="submit" value="Send">
+					{{ form.hidden_tag() }}
+					<p>{{ form.name.label() }} {{ form.name }}</p>
+					<p>{{ form.address.label() }} {{ form.address }}</p>
+					<p>{{ form.gender.label() }} {{ form.gender }}</p>
+                    <p>{{ form.education.label() }} {{ form.education }}</p>
+					<p>{{ form.birthday.label() }} {{ form.birthday }}</p>
+					<p>{{ form.resume.label() }} {{ form.resume }}</p>
+                    {{ form.submit() }}
 			</form>
 	</div>
 {% endblock %}

@@ -24,28 +24,12 @@
 	margin-top: 15%;
 }
 
-.submit {
-	position: relative;
-	margin-top: 10%;
-	width: 80px;
-	height: 40px;
-	background-color: #C0C0C0;
-	border: 1px solid #808080;
-	border-radius: 6px;
-	font-size: 24px;
-	font-family: Cormorant;
-	box-shadow: 0 2px 0 #3c354a;
-	transition:margin-top 0.5s linear; 
-	transition: background-color 0.5s linear;
-}
-
-.submit:hover {
-	box-shadow: 0 1px 0 #3c354a;
-	top: 2px;
-	background-color: #FFEBCD;
-}
-
 .lg {
 	top: 5%;
 	position: relative;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
 }

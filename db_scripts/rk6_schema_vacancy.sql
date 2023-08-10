@@ -32,7 +32,7 @@ CREATE TABLE `vacancy` (
   PRIMARY KEY (`Vac_id`,`Pos_id`),
   KEY `fk_vacancy_position_unitcode1001_idx` (`Pos_id`),
   CONSTRAINT `fk_vacancy_position_unitcode1001` FOREIGN KEY (`Pos_id`) REFERENCES `position_unitcode100` (`Pos_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `vacancy` (
 
 LOCK TABLES `vacancy` WRITE;
 /*!40000 ALTER TABLE `vacancy` DISABLE KEYS */;
-INSERT INTO `vacancy` VALUES (3,'Frontend разработчик ','2022-01-01',NULL,4,'Необходимые технологии: javascript/html/css '),(4,'Переводчик английского языка ','2022-01-02','2023-01-23',10,'Уровень знания: Upper intermediate '),(5,'Переводчик английского языка ','2022-01-02',NULL,10,'Уровень знания: Upper intermediate '),(6,'Переводчик английского языка ','2022-01-02',NULL,10,'Уровень знания: Upper intermediate '),(7,'Python разработчик ','2022-01-03',NULL,9,'Необходимые технологии: Django '),(20,'Переводчик английского языка','2023-01-22','2023-01-29',48,'+'),(25,'Java епта','2023-01-23','2023-01-23',71,'лул'),(26,'ЧВК12','2023-01-23','2023-01-23',72,'xr1'),(27,'Frontend разработчик','2023-01-23','2023-01-23',4,'вап'),(28,'Frontend разработчик','2023-01-23','2023-01-23',4,'апп');
+INSERT INTO `vacancy` VALUES (3,'Frontend developer','2022-01-01',NULL,4,'Required technologies: javascript/html/css'),(4,'English Translator ','2022-01-02','2023-01-23',10,'Level of knowledge: Upper intermediate'),(5,'English Translator','2022-01-02',NULL,10,'Level of knowledge: Upper intermediate'),(6,'English Translator','2022-01-02',NULL,10,'Level of knowledge: Upper intermediate'),(7,'Python developer','2022-01-03',NULL,9,'Required technologies: Django'),(20,'English Translator','2023-01-22','2023-01-29',48,''),(25,'Java developer','2023-01-23','2023-01-23',71,''),(26,'Python developer','2023-01-23','2023-01-23',72,''),(27,'Frontend developer','2023-01-23','2023-01-23',4,''),(28,'Frontend developer','2023-01-23','2023-01-23',4,''),(29,'Frontend developer','2023-08-10',NULL,74,'Required technologies: javascript/html/css'),(30,'Frontend developer','2023-08-10',NULL,4,'Required technologies: javascript/html/css');
 /*!40000 ALTER TABLE `vacancy` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-13 22:09:01
+-- Dump completed on 2023-08-10 18:29:40

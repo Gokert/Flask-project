@@ -4,12 +4,12 @@
 {% block header %}
     <div class="head">
 		<nav class="nav">
-			<a class ="nav_link"href="/home">Main</a>
-			<a class ="nav_link"href="/employees">Employees</a>
-			<a class ="nav_link"href="/vacancy">Vacancy</a>
-			<a class ="nav_link"href="#">Dates</a>
-			<a class ="nav_link"href="/interview">Interview</a>
-			<a class ="nav_link"href="/exit">Exit</a>
+			<a class ="nav_link" href="{{ url_for('menu_choice') }}">Main</a>
+			<a class ="nav_link" href="{{ url_for('employees.employees') }}">Employees</a>
+			<a class ="nav_link" href="{{ url_for('vacancy.vacancy') }}">Vacancy</a>
+			<a class ="nav_link" href="#">Dates</a>
+			<a class ="nav_link" href="{{ url_for('interview.interview') }}">Interview</a>
+			<a class ="nav_link" href="{{ url_for('exit_func') }}">Exit</a>
 		</nav>
 	</div>
 {% endblock %}

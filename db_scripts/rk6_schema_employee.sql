@@ -26,16 +26,16 @@ CREATE TABLE `employee` (
   `Emp_id` int NOT NULL AUTO_INCREMENT,
   `Name` text NOT NULL,
   `Birthday` date NOT NULL,
-  `Adress` text NOT NULL,
+  `Address` text NOT NULL,
   `education` text NOT NULL,
-  `Enroll_date` date DEFAULT NULL,
+  `Enroll_date` date NOT NULL,
   `Dismiss_date` date DEFAULT NULL,
   `Salary` int NOT NULL,
   `Pos_id` int NOT NULL,
   PRIMARY KEY (`Emp_id`),
   KEY `fk_employee_position_unitcode100_idx` (`Pos_id`),
   CONSTRAINT `fk_employee_position_unitcode100` FOREIGN KEY (`Pos_id`) REFERENCES `position_unitcode100` (`Pos_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `employee` (
 
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
-INSERT INTO `employee` VALUES (3,'Andrey Myshlyaev','2002-05-20','','MSTU Bauman','2020-02-04',NULL,100000,2),(7,'Aleksander Davidov','2002-03-21','','MSTU Bauman','2021-10-10',NULL,85000,3),(9,'aaa','2003-03-24','','MSTU Bauman','2022-01-01','2023-02-18',80000,5),(51,'Vlad Scripalenko','2000-01-01','Moscow','MGU','2020-01-01','2023-01-23',60000,37),(52,'Misha Timof','2000-01-01','Moscow','mgtu','2021-01-01','2023-02-18',60000,35),(53,'Vlad Scripalenko','2000-01-01','Moscow','mgtu','2020-01-01','2023-01-23',60000,10),(54,'Vlad Scripalenko214213','2000-01-01','Moscow','mgtu','2021-01-01','2023-02-18',60000,2);
+INSERT INTO `employee` VALUES (3,'Andrey Myshlyaev','2002-05-20','','MSTU Bauman','2020-02-04',NULL,100000,2),(7,'Aleksander Davidov','2002-03-21','','MSTU Bauman','2021-10-10',NULL,85000,3),(9,'Anton Pat','2003-03-24','','MSTU Bauman','2022-01-01','2023-02-18',80000,5),(51,'Vlad Scripalenko','2000-01-01','Moscow','MGU','2020-01-01','2023-01-23',60000,37),(52,'Misha Timof','2000-01-01','Moscow','mgtu','2021-01-01','2023-02-18',60000,35),(53,'Vlad Scripalenko','2000-01-01','Moscow','mgtu','2020-01-01','2023-01-23',60000,10),(54,'Vlad Scripalenko214213','2000-01-01','Moscow','mgtu','2021-01-01','2023-02-18',60000,2),(55,'Vlad Chichilov','2000-11-11','Kursk','MAI','2080-12-22',NULL,20000,3),(56,'Andrew Kekus','2006-02-11','Kursk','MAI','2113-11-12',NULL,20000,9);
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-13 22:09:01
+-- Dump completed on 2023-08-10 18:29:40

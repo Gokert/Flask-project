@@ -1,5 +1,5 @@
 {
-  "a": [
+  "admin": [
     "blueprint_admin",
     "employees",
     "vacancy",
@@ -7,9 +7,6 @@
     "candidates.candidates",
     "interview",
     "blueprint_report"
-  ],
-  "b": [
-    "blueprint_admin.empl"
   ],
   "manager": [
     "bp_report.start_page2",
@@ -21,7 +18,6 @@
     "blueprint_admin.admin",
     "admin.admin",
     "personal_account_user",
-    "personal_account_user.kek",
     "vacancy_user"
   ]
 }

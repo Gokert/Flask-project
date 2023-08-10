@@ -8,12 +8,13 @@
 {% block content %}
 		<div class='reg'>
 			<h1 align="center" class = 'lg'> Autorization</h1>
-		    <div align="center">
-		        <form method="post" action="">
-					<input type="text" class="login" id="login" name="login" placeholder="login">
-			        <input type="password" class="password" name="password" id="password" placeholder="password">
-			        <input type="submit" class="submit" value="Send">
-			    </form>
+			<div align="center">
+				<form method="post" action="" class="form-contact">
+					{{ form.hidden_tag() }}
+					<p>{{ form.login.label() }} {{ form.login }}</p>
+					<p>{{ form.password.label() }} {{ form.password }}</p>
+					{{ form.submit() }}
+				</form>
 			</div>
 			{% if message%}
 				<div class="message">{{message}}</div>

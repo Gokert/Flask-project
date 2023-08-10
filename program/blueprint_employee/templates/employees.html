@@ -9,7 +9,7 @@
 {% block content %}
 		<div class="container">
 			<div class="search_add active">
-				<a class="add" href="{{url_for('employees.add_empl')}}">ADD</a>
+				<a class="add" href="{{url_for('employees.add_employee')}}">ADD</a>
 				<input class="search" placeholder="search on username">
 			</div>
 			<div class="response">
@@ -37,7 +37,7 @@
 						<td class="empl3">{{i.get('Salary')}}</td>
 						<td class="empl3">
 							<div class="menu">
-								<a class="delete" href="{{ url_for('employees.dl', Emp_id=i.get('Emp_id')) }}">X</a>
+								<a class="delete" href="{{ url_for('employees.delete_employee', Emp_id=i.get('Emp_id')) }}">X</a>
 							</div>
 						</td>
 					</tr>
@@ -50,6 +50,5 @@
 
 {% include 'paginator.html' %}
 {% block paginator %}{% endblock %}
-
 
 {% endblock %}

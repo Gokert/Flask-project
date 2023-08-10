@@ -8,10 +8,10 @@
 {% block header %}
 		<div class="head">
 		<nav class="nav">
-			<a class ="nav_link"href="/home">Home</a>
-			<a class ="nav_link"href="{{url_for('personal_account_user.vacancy_user')}}">Vacancy</a>
-			<a class ="nav_link"href="{{url_for('personal_account_user.results')}}">Results</a>
-			<a class ="nav_link"href="/exit">Exit</a>
+			<a class ="nav_link" href="{{ url_for('menu_choice') }}">Home</a>
+			<a class ="nav_link" href="{{ url_for('personal_account_user.vacancy_user')}}">Vacancy</a>
+			<a class ="nav_link" href="{{ url_for('personal_account_user.results')}}">Results</a>
+			<a class ="nav_link" href="{{ url_for('exit_func') }}">Exit</a>
 		</nav>
 	</div>
 {% endblock %}

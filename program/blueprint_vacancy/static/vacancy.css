@@ -2,8 +2,7 @@
     top:150px;
     left:60px;
     margin:0 auto;
-    width:250px;
-    height:300px;
+    padding: 10px 10px 10px 10px;
     position:absolute;
     text-align:center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
