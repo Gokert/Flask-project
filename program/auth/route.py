@@ -6,7 +6,7 @@ from db_work import select_dict
 from sql_provider import SQLProvider
 from auth.forms import LoginForm
 
-blueprint_auth = Blueprint('blueprint_auth', __name__, template_folder='templates', static_folder='static')
+blueprint_auth = Blueprint('blueprint_auth', __name__, template_folder='templates')
 provider = SQLProvider(os.path.join(os.path.dirname(__file__), 'sql'))
 
 
@@ -31,7 +31,7 @@ def start_auth():
                         return redirect(url_for('menu_choice'))
                     else:
                         return render_template('auth.html', form=form, message='User not found')
-                return render_template('auth.html', form=form, message='Repeat the input')
+
             return render_template('auth.html', form=form, message='Inputs not valid')
     else:
         return redirect(url_for('admin.admin'))

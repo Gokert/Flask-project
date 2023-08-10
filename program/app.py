@@ -23,8 +23,8 @@ app.config['db_config'] = json.load(open('data_files/dbconfig.json'))
 app.config['access_config'] = json.load(open('data_files/access.json'))
 
 
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
+@app.route('/home', methods=['GET'])
 @login_required
 def menu_choice():
     """Home page"""
@@ -38,7 +38,7 @@ def menu_choice():
         return render_template("main_header.html")
 
 
-@app.route('/exit')
+@app.route('/exit', methods=['GET'])
 def exit_func():
     session.clear()
     return render_template("main_header.html")

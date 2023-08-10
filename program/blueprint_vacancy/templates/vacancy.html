@@ -2,7 +2,7 @@
 {% block page_title %}Vacancy{% endblock %}
 
 {% block css %}
-	<link rel="stylesheet" href="static/vacancy.css">
+	<link rel="stylesheet" href="/static/vacancy.css">
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,7 @@
 					<p>{{ form.head.label() }} {{ form.head }}</p>
 					<p>{{ form.text.label() }} {{ form.text }}</p>
 					<p>{{ form.salary.label() }} {{ form.salary }}</p>
-				{{ form.submit() }}
+					{{ form.submit() }}
 			</form>
 		</div>
 	</div>

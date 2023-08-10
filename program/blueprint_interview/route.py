@@ -7,7 +7,7 @@ from paginator import pagination
 from sql_provider import SQLProvider
 from blueprint_interview.forms import EditInterviewForm
 
-blueprint_interview = Blueprint('interview', __name__, template_folder='templates', static_folder='static')
+blueprint_interview = Blueprint('interview', __name__, template_folder='templates')
 provider = SQLProvider(os.path.join(os.path.dirname(__file__), 'sql'))
 
 
@@ -37,45 +37,41 @@ def interview():
         return redirect(url_for('interview.interview'))
 
 
-@blueprint_interview.route('/edit/<int:Int_id>', methods=['GET', 'POST'])
+@blueprint_interview.route('/edit/<int:Int_id>', methods=['GET'])
 @group_required
 def edit_interview(Int_id):
-    if request.method == "GET":
-        session["interview_id"] = Int_id
-        form = EditInterviewForm()
+    session["interview_id"] = Int_id
+    form = EditInterviewForm()
 
-        all_employees = select_dict(current_app.config['db_config'], provider.get("all_employees.sql"))
-        last_interview = select_dict(current_app.config['db_config'], provider.get("information_for_edit_interview.sql", Int_id=Int_id))[0]
-        form.result.data = last_interview['Result']
-        form.scores.data = last_interview['Scores']
-        form.int_date.data = last_interview['Int_date']
-        form.name_emp.data = last_interview['Name_emp']
-        name_emp = last_interview['Name_emp']
+    all_employees = select_dict(current_app.config['db_config'], provider.get("all_employees.sql"))
+    last_interview = select_dict(current_app.config['db_config'], provider.get("information_for_edit_interview.sql", Int_id=Int_id))[0]
+    form.result.data = last_interview['Result']
+    form.scores.data = last_interview['Scores']
+    form.int_date.data = last_interview['Int_date']
+    form.name_emp.data = last_interview['Name_emp']
+    name_emp = last_interview['Name_emp']
 
-        return render_template('interview_edit.html', Int_id=Int_id, form=form, array=all_employees, name_emp=name_emp)
+    return render_template('interview_edit.html', Int_id=Int_id, form=form, array=all_employees, name_emp=name_emp)
 
 
-@blueprint_interview.route('/new', methods=['GET', 'POST'])
+@blueprint_interview.route('/new', methods=['GET'])
 def new_interview():
-    if request.method == "GET":
-        limit = 10
-        result = pagination(limit, provider, "count_interview_occupied.sql", "interview_occupied.sql")
+    limit = 10
+    result = pagination(limit, provider, "count_interview_occupied.sql", "interview_occupied.sql")
 
-        return render_template("interview.html", array=result['array'], page=result['page'],
-                               total_pages=result['total_pages'])
+    return render_template("interview.html", array=result['array'], page=result['page'],
+                           total_pages=result['total_pages'])
 
 
-@blueprint_interview.route('/results', methods=['GET', 'POST'])
+@blueprint_interview.route('/results', methods=['GET'])
 def results():
-    if request.method == "GET":
-        limit = 10
-        result = pagination(limit, provider, "count_interview_unoccupied.sql", "interview_unoccupied.sql")
-        return render_template('interview.html', array=result['array'], page=result['page'],
-                               total_pages=result['total_pages'])
+    limit = 10
+    result = pagination(limit, provider, "count_interview_unoccupied.sql", "interview_unoccupied.sql")
+    return render_template('interview.html', array=result['array'], page=result['page'],
+                           total_pages=result['total_pages'])
 
 
-@blueprint_interview.route('/show/<int:Int_id>', methods=['GET', 'POST'])
+@blueprint_interview.route('/show/<int:Int_id>', methods=['GET'])
 def show_candidate(Int_id):
-    if request.method == 'GET':
-        array = select_dict(current_app.config['db_config'], provider.get("find_candidate.sql", Int_id=Int_id))
-        return render_template('show_candidate.html', array=array)
+    array = select_dict(current_app.config['db_config'], provider.get("find_candidate.sql", Int_id=Int_id))
+    return render_template('show_candidate.html', array=array)

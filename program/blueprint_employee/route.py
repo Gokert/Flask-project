@@ -7,18 +7,17 @@ from paginator import pagination
 from sql_provider import SQLProvider
 from blueprint_employee.forms import EmployeeAddForm
 
-blueprint_employees = Blueprint('employees', __name__, template_folder='templates', static_folder='static')
+blueprint_employees = Blueprint('employees', __name__, template_folder='templates')
 provider = SQLProvider(os.path.join(os.path.dirname(__file__), 'sql'))
 
 
-@blueprint_employees.route('/', methods=['GET', 'POST'])
+@blueprint_employees.route('/', methods=['GET'])
 @group_required
 def employees():
-    if request.method == 'GET':
-        limit = 10
-        result = pagination(limit, provider, 'count_employees.sql', 'all_internal_users.sql')
-        return render_template('employees.html', array=result['array'], page=result['page'],
-                               total_pages=result['total_pages'])
+    limit = 10
+    result = pagination(limit, provider, 'count_employees.sql', 'all_internal_users.sql')
+    return render_template('employees.html', array=result['array'], page=result['page'],
+                           total_pages=result['total_pages'])
 
 
 @blueprint_employees.route('/<int:Emp_id>/del', methods=['GET'])

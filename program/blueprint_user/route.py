@@ -7,8 +7,7 @@ from paginator import pagination
 from sql_provider import SQLProvider
 from blueprint_user.forms import VacancyUserForm
 
-blueprint_personal_account = Blueprint('personal_account_user', __name__, template_folder='templates',
-                                       static_folder='static')
+blueprint_personal_account = Blueprint('personal_account_user', __name__, template_folder='templates')
 provider = SQLProvider(os.path.join(os.path.dirname(__file__), 'sql'))
 
 
@@ -31,7 +30,7 @@ def personal_account():
                provider.get("add_candidate.sql", Name=name, Address=address, Gender=gender, Education=education,
                             Birthday=birthday, resume=resume, user_id=session['user_id']))
         id = select_dict(current_app.config["db_config"],
-                         provider.get("select_candidate.sql", Name=name, Birthday=birthday))
+                         provider.get("select_candidate.sql", Name=name, Birthday=birthday, Address=address, Gender=gender, Education=education))
         insert(current_app.config["db_config"],
                provider.get("add_interview.sql", Cand_id=id[0]['Cand_id'], Vac_id=session['vacancy_id']))
 
@@ -40,7 +39,7 @@ def personal_account():
         return render_template('user_header.html')
 
 
-@blueprint_personal_account.route('/vacancy_user', methods=['GET', 'POST'])
+@blueprint_personal_account.route('/vacancy_user', methods=['GET'])
 def vacancy_user():
     limit = 5
     result = pagination(limit, provider, 'count_vacancy.sql', 'all_vacancy.sql')
@@ -48,15 +47,14 @@ def vacancy_user():
                            total_pages=result['total_pages'])
 
 
-@blueprint_personal_account.route('/resume/<int:id>', methods=['GET', 'POST'])
+@blueprint_personal_account.route('/resume/<int:id>', methods=['GET'])
 def resume(id):
-    if request.method == 'GET':
-        session['vacancy_id'] = id
-        form = VacancyUserForm()
-        return render_template('resume.html', form=form)
+    session['vacancy_id'] = id
+    form = VacancyUserForm()
+    return render_template('resume.html', form=form)
 
 
-@blueprint_personal_account.route('/results')
+@blueprint_personal_account.route('/results', methods=['GET'])
 def results():
     limit = 10
     result = pagination(limit, provider, 'count_interview_user.sql', 'interview_user.sql', id=session['user_id'])

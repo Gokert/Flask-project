@@ -2,7 +2,7 @@
 {% block page_title %}User{% endblock %}
 
 {% block css %}
-    <link rel="stylesheet" href="static/results.css">
+    <link rel="stylesheet" href="/static/results.css">
 {% endblock %}
 
 {% block content %}
@@ -10,20 +10,20 @@
 				<table class="table" id="table">
 					<thead class="thd">
 					<tr>
-						<th class="e">Vacancy</th>
-						<th class="e">Scores</th>
-						<th class="e">Result</th>
-						<th class="e">Date of the event</th>
+						<th>Vacancy</th>
+						<th>Scores</th>
+						<th>Result</th>
+						<th>Date of the event</th>
 					</tr>
 					</thead>
 					<tbody class="tby">
 					{% for i in array %}
 
 					<tr class="tr" id="tr">
-						<td class="empl3">{{i.get('Name_pos')}}</td>
-						<td class="empl3">{{i.get('Scores')}}</td>
-						<td class="empl3">{{i.get('Result')}}</td>
-						<td class="empl3">{{i.get('Int_date')}}</td>
+						<td>{{i.get('Name_pos')}}</td>
+						<td>{{i.get('Scores')}}</td>
+						<td>{{i.get('Result')}}</td>
+						<td>{{i.get('Int_date')}}</td>
 					</tr>
 					{% endfor %}
 					<tbody>
