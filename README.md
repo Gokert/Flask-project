@@ -6,6 +6,5 @@ Company officials keep track of incoming applications, and schedule interviews f
 Administrators edit data about employees and add new ones.
 
 ![Static Badge](https://img.shields.io/badge/Python-3.11.4-green)
-![Static Badge](https://img.shields.io/badge/colorama-0.4.6-green)
 ![Static Badge](https://img.shields.io/badge/MySql-8.0.31-green)
 ![Static Badge](https://img.shields.io/badge/Flask-2.3.2-green)
